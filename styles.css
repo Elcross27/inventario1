@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4e4e4e; /* Fondo suave */
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #7fbd39, #c2db51); /* Degradado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Mayor padding */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    position: relative; /* Para posicionar pseudo-elementos */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Añadido box-shadow */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con opacidad al pasar el ratón */
+    transform: scale(1.05); /* Efecto de escalado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+}
+
+/* Añadir un efecto adicional con un pseudo-elemento */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Capa ligera de sombra */
+    z-index: -1; /* Detrás del contenido */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.container {
+    margin: 100px auto;
+    padding-right: 40px;
+    
+    background-color: rgb(121, 121, 121);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px;
+    width: 300px; /* Ajusta este valor según tu preferencia */
+    max-width: 90%; /* Para que sea responsivo */
+}
+
+h1 {
+    color: #f0f0f0;
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+    text-align: center; /* Centrar el encabezado */
+}
+
+p {
+    color: #f0f0f0; /* Color más suave para el texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Estilos para el formulario de inicio de sesión */
+form {
+    display: flex;
+    flex-direction: column; /* Colocar elementos en columna */
+    margin-top: 20px; /* Espacio superior para el formulario */
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="date"], 
+input[type="number"] {
+    width: 100%;
+    padding-right: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s; /* Transición en el borde */
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+input[type="date"]:focus, 
+input[type="number"]:focus {
+    border-color: #c2db51; /* Cambiar color del borde al hacer foco */
+    outline: none; /* Quitar el contorno predeterminado */
+}
+
+.btn {
+    background-color: #7fbd39;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transición para el botón */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra en el botón */
+}
+
+.btn:hover {
+    background-color: #7fbd39; /* Cambiar el color al pasar el ratón */
+    transform: scale(1.05); /* Efecto de escalado */
+}
+
+.links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.links a {
+    color: #54b7c4;
+    text-decoration: none;
+    transition: color 0.3s; /* Transición para los enlaces */
+}
+
+.links a:hover {
+    color: #7fbd39; /* Cambiar color al pasar el ratón */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table, .th, .td {
+    border: 1px solid #ccc;
+}
+
+.th, .td {
+    padding: 10px;
+    text-align: left;
+}
+
+.th {
+    background-color: #c5ce43; /* Color de fondo para encabezados */
+    color: white; /* Color de texto para encabezados */
+}
+
+.tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo alternativo para filas */
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #4b4b4b; /* Un azul más claro y atractivo */
+    color: #ecf0f1; /* Color de texto claro */
+    padding: 30px 0; /* Espaciado adecuado */
+    text-align: center; /* Centrar el contenido */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Arial', sans-serif; /* Fuente legible */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto elevado */
+}
+
+.footer-container {
+    max-width: 1200px; /* Ancho máximo para mantener el contenido centrado */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 20px; /* Espaciado lateral */
+    display: flex; /* Usar flexbox para organizar el contenido */
+    flex-direction: column; /* Colocar en columna */
+    align-items: center; /* Centrar los elementos */
+}
+
+.footer-info {
+    margin-bottom: 20px; /* Espaciado entre secciones */
+}
+
+.footer-info h4 {
+    font-size: 26px; /* Tamaño de fuente más grande */
+    margin-bottom: 10px; /* Espaciado inferior */
+    font-weight: bold;
+}
+
+.footer-info p {
+    font-size: 16px; /* Tamaño de fuente legible */
+    color: #bdc3c7; /* Color de texto más claro */
+}
+
+.footer-links {
+    display: flex; /* Usar flexbox para enlaces */
+    justify-content: center; /* Centrar enlaces */
+    gap: 30px; /* Espaciado entre enlaces */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.footer-links a {
+    color: #ecf0f1; /* Color de texto de enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s ease; /* Transición suave para hover */
+}
+
+.footer-links a:hover {
+    color: #3498db; /* Color al pasar el ratón */
+}
+
+.footer-social {
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.footer-social a {
+    margin: 0 15px; /* Espaciado entre iconos */
+    color: #ecf0f1; /* Color de iconos */
+    font-size: 22px; /* Tamaño de iconos */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.footer-social a:hover {
+    color: #3498db; /* Color al pasar el ratón */
+}
+
+.footer-copyright {
+    margin-top: 15px; /* Espaciado superior */
+    font-size: 14px; /* Tamaño de texto más pequeño */
+    color: #95a5a6; /* Texto sutil */
+}
+
