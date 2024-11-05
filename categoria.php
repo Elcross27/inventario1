@@ -6,6 +6,8 @@
     <title>Categoría</title>
     <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de enlazar el archivo CSS -->
 </head>
+
+
 <body>
     <!-- Barra de navegación -->
     
@@ -29,16 +31,18 @@
         <h1>Categoría</h1>
         
     <!-- ... resto del formulario ... -->
-</form>
-     <form>
-     <form id="categoria" action="p_categoria.php" method="POST" onsubmit="return validarCategoria()">
-     <label for="nombre">Nombre:</label>
-     <input type="text" id="nombre" name="nombre" required>
-     <br>
-     <button type="submit" class="btn">Ingresar</button>
-    
-</form>
+
+
+    <form id="categoria" action="p_categoria.php" method="POST" onsubmit="return validarCategoria()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <button type="submit" class="btn">Ingresar</button>
+        
+    </form>
+
 <?php
+
 $host = "localhost";
 $db = "inventario"; // Nombre de la base de datos
 $user = "root";     // Usuario de MySQL
@@ -52,34 +56,25 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 ?>
-    </form>
+
     </div>
 
     <?php include 'footer.php'; ?>
 
-
     <script src="validaciones.js"></script>
     <script>
-// Aquí va el código JavaScript específico para este formulario
-<!-- En categoria.php -->
-<form id="categoriaForm" action="procesar_categoria.php" method="POST" onsubmit="return validarCategoria()">
-    <!-- ... resto del formulario ... -->
-</form>
-
-<script src="validaciones.js"></script>
-<script>
-function validarCategoria() {
-    let isValid = true;
-    
-    // Validar nombre de categoría
-    const nombre = document.getElementById('nombre');
-    if (!nombre.value.trim()) {
-        showError('Por favor, ingrese el nombre de la categoría.');
-        isValid = false;
-    }
-    
-    return isValid;
-}
+        function validarCategoria() {
+            let isValid = true;
+            
+            // Validar nombre de categoría
+            const nombre = document.getElementById('nombre');
+            if (!nombre.value.trim()) {
+                showError('Por favor, ingrese el nombre de la categoría.');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+    </script>
 </body>
-</script>
 </html>

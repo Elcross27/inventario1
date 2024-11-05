@@ -5,7 +5,7 @@ include 'categoria.php'; // Incluir el archivo de conexión
 $nombre = $_POST['nombre'];
 
 // Consulta SQL para insertar la nueva categoría
-$sql = "INSERT INTO categorias (nombre) VALUES (?)";
+$sql = 'INSERT INTO categorias (nombre) VALUES (?)';
 
 // Preparar la consulta
 $stmt = $conn->prepare($sql);
@@ -32,5 +32,3 @@ if ($stmt) {
 $conn->close();
 ?>
 
-<!-- Botón para volver a la página de categorías -->
-<a href="categorias.php" class="btn">Volver a Categoría</a>
