@@ -10,17 +10,18 @@
     <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="logo">
-            <h1 style="color: white;">Inventario</h1>
+            <h1 style="color: white;">Inventario</h1> <!-- Título o logo -->
         </div>
         <div>
-            <a href="index.php">Inicio</a>
+            <a href="index.php" class="active">Inicio</a>
             <a href="productos.php">Productos</a>
             <a href="proveedores.php">Proveedores</a>
-            <a href="categoria.php">Categoría</a>
-            <a href="movimientos.php" class="active">Movimientos</a> <!-- Resaltamos esta página -->
+            <a href="categoria.php">Categorías</a>
+            <a href="movimientos.php">Movimientos</a>
             <a href="login.php" class="btn">Iniciar Sesión</a>
         </div>
     </nav>
+
 
     <!-- Contenido de la página -->
     <div class="container">

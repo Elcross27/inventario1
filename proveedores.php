@@ -28,14 +28,31 @@
         <form id="proveedorForm" action="procesar_proveedor.php" method="POST" onsubmit="return validarProveedor()">
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" required>
-        <br>
-        <label for="telefono">Teléfono:</label>
-        <input type="text" id="telefono" name="telefono" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
-        <br>
-        <button type="submit" class="btn">Ingresar</button>
+    <br>
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+    <br>
+    <button type="submit" class="btn">Ingresar</button>
+</form>
+
+    <?php
+    $host = "localhost";
+    $db = "inventario"; // Nombre de la base de datos
+    $user = "root";     // Usuario de MySQL
+    $pass = "";         // Contraseña de MySQL
+
+    // Crear la conexión
+    $conn = new mysqli($host, $user, $pass, $db);
+
+    // Verificar si la conexión fue exitosa
+    if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+    }
+    ?>
+
     </form>
     </div>
 

@@ -28,10 +28,7 @@
         <h1>Agregar Productos</h1>
     <!-- En productos.php -->
 <form id="productoForm" action="procesar_producto.php" method="POST" onsubmit="return validarProducto()">
-    <!-- ... resto del formulario ... -->
-</form>
-<form id="productoForm" action="procesar_producto.php" method="POST" onsubmit="return validarProducto()">
-    <label for="nombre">Nombre:</label>
+    <label for="nombre" class="lñ">Nombre:</label>
     <input type="text" id="nombre" name="nombre" required>
         <br>
         <label for="descripción">Descripción:</label>
@@ -51,6 +48,22 @@
         
         <br>
         <button type="submit" class="btn">Ingresar</button>
+
+        // conexion.php
+<?php
+$host = "localhost";
+$db = "inventario"; // Nombre de la base de datos
+$user = "root";     // Usuario de MySQL
+$pass = "";         // Contraseña de MySQL
+
+// Crear la conexión
+$conn = new mysqli($host, $user, $pass, $db);
+
+// Verificar si la conexión fue exitosa
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+?>
     </form>
     </div>
 

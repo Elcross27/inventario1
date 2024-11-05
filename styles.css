@@ -43,9 +43,8 @@ body {
 }
 
 .container {
-    margin: 100px auto;
-    padding-right: 40px;
-    
+    margin: 50px auto; /* Centrar el contenedor horizontalmente */
+    padding: 20px 20px 20px 20px; /* Superior, Derecho, Inferior, Izquierdo */
     background-color: rgb(121, 121, 121);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
     border-radius: 8px;
@@ -75,9 +74,9 @@ input[type="text"],
 input[type="password"], 
 input[type="date"], 
 input[type="number"] {
-    width: 100%;
-    padding-right: 10px;
-    margin: 5px;
+    width: 93%;
+    padding: 10px; /* Aumentar el padding interno */
+    margin: 5px 0; /* Espacio entre los inputs */
     border: 1px solid #ccc;
     border-radius: 6px;
     transition: border-color 0.3s; /* Transición en el borde */
@@ -94,7 +93,7 @@ input[type="number"]:focus {
 .btn {
     background-color: #7fbd39;
     color: white;
-    padding: 10px;
+    padding: 10px; /* Padding adecuado */
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -133,7 +132,7 @@ input[type="number"]:focus {
 }
 
 .th, .td {
-    padding: 10px;
+    padding: 15px; /* Aumentar el padding para las celdas */
     text-align: left;
 }
 
@@ -221,5 +220,9 @@ input[type="number"]:focus {
     margin-top: 15px; /* Espaciado superior */
     font-size: 14px; /* Tamaño de texto más pequeño */
     color: #95a5a6; /* Texto sutil */
+}
+
+.lñ{
+    text-align: center;
 }
 
